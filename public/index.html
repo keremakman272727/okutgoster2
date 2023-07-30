@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Planical modern template</title>
+    <meta property="og:title" content="Planical modern template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <script
+        type="text/javascript"
+        src="https://unpkg.com/dangerous-html/dist/default/lib.umd.js"
+      ></script>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <nav class="navbar-navbar navbar-root-class-name">
+          <img
+            alt="image"
+            src="public/Branding/picsart_23-07-30_21-10-00-938-200h.png"
+            class="navbar-image"
+          />
+          <div class="navbar-nav-content">
+            <div class="navbar-nav-links">
+              <span class="navbar-link nav-link">Anasayfa</span>
+              <span class="nav-link">Okut Göster Nedir?</span>
+              <span class="nav-link">İletişim</span>
+            </div>
+            <div class="navbar-get-started get-started">
+              <span class="navbar-text">Satın Al</span>
+            </div>
+            <div id="open-mobile-menu" class="navbar-hamburger get-started">
+              <img
+                alt="image"
+                src="public/Icons/hamburger-200h.png"
+                class="navbar-image1"
+              />
+            </div>
+          </div>
+          <div id="mobile-menu" class="navbar-mobile-menu">
+            <div class="navbar-branding">
+              <img
+                alt="image"
+                src="public/Branding/planical7012-ttpb.svg"
+                class="navbar-image2"
+              />
+              <div id="close-mobile-menu" class="navbar-container">
+                <svg viewBox="0 0 1024 1024" class="navbar-icon">
+                  <path
+                    d="M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="navbar-nav-links1">
+              <span class="nav-link">Features</span>
+              <span class="nav-link">Why us</span>
+              <span class="nav-link">Prices</span>
+              <span class="nav-link">Contact</span>
+            </div>
+            <div class="get-started">
+              <span class="navbar-text1">Get started</span>
+            </div>
+          </div>
+          <div>
+            <dangerous-html
+              html="<script>
+    /*
+Mobile menu - Code Embed
+*/
+
+/* listenForUrlChangesMobileMenu() makes sure that if you changes pages inside your app, 
+the mobile menu will still work*/
+
+const listenForUrlChangesMobileMenu = () => {
+    let url = location.href;
+    document.body.addEventListener('click', () => {
+        requestAnimationFrame(() => {
+            if (url !== location.href) {
+                runMobileMenuCodeEmbed();
+                url = location.href;
+            }
+        });
+    },
+    true
+    );
+};
+
+const runMobileMenuCodeEmbed = () => {
+    // Mobile menu
+    const mobileMenu = document.querySelector('#mobile-menu')
+
+    // Buttons
+    const closeButton = document.querySelector('#close-mobile-menu')
+    const openButton = document.querySelector('#open-mobile-menu')
+
+    // On openButton click, set the mobileMenu position left to -100vw
+    openButton &amp;&amp; openButton.addEventListener('click', function() {
+        mobileMenu.style.transform = 'translateX(0%)'
+    })
+
+    // On closeButton click, set the mobileMenu position to 0vw
+    closeButton &amp;&amp; closeButton.addEventListener('click', function() {
+        mobileMenu.style.transform = 'translateX(100%)'
+    })
+}
+
+runMobileMenuCodeEmbed()
+listenForUrlChangesMobileMenu()
+</script>"
+            ></dangerous-html>
+          </div>
+        </nav>
+        <section class="home-section">
+          <div class="home-hero">
+            <div class="home-content">
+              <main class="home-main">
+                <header class="home-header">
+                  <h1 class="home-heading">
+                    Artık "Aracım çekilecek mi?" korkusu yok!
+                  </h1>
+                  <span class="home-caption">
+                    <span>
+                      OkutGöster etiketini arabana yapıştır. QR Kodu okutan
+                      kişilerle ister numaranı paylaş&nbsp;
+                    </span>
+                    <span>
+                      istersen de sosyal medya hesaplarını paylaş. Bu sayede
+                      hatalı park yapsan bile ulaşılabilir ol.
+                    </span>
+                    <br />
+                  </span>
+                </header>
+                <div class="home-buttons">
+                  <div class="home-get-started button">
+                    <span class="home-text03">Satın al</span>
+                  </div>
+                  <div class="home-get-started1 button">
+                    <span class="home-text04">Detaylar</span>
+                  </div>
+                </div>
+              </main>
+            </div>
+            <div class="home-image">
+              <img
+                alt="image"
+                src="public/SectionImages/heroimage-700w.png"
+                class="home-image1"
+              />
+            </div>
+            <div class="home-image2"></div>
+          </div>
+        </section>
+        <section class="home-section1">
+          <header class="home-header1">
+            <header class="home-left">
+              <h2 class="section-heading home-heading1">Nasıl Kullanılır?</h2>
+            </header>
+            <div class="home-right">
+              <p class="home-paragraph section-description">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam.
+              </p>
+            </div>
+          </header>
+          <main class="home-cards">
+            <section class="card-card card-root-class-name2">
+              <div class="card-icon">
+                <img
+                  alt="image"
+                  src="public/Icons/group%201317-200h.png"
+                  class="card-icon1"
+                />
+              </div>
+              <main class="card-content">
+                <h1 class="card-header"><span>Satın Al</span></h1>
+                <p class="card-description">
+                  <span>
+                    OkuGöster etiketini Whatsapp veya Shopier aracılığı ile
+                    güvenle satın al.
+                  </span>
+                </p>
+              </main>
+            </section>
+            <section class="card-card card-root-class-name">
+              <div class="card-icon">
+                <img
+                  alt="image"
+                  src="public/Icons/group%201316-200w.png"
+                  class="card-icon1"
+                />
+              </div>
+              <main class="card-content">
+                <h1 class="card-header"><span>Yapıştır</span></h1>
+                <p class="card-description">
+                  <span>Etİketi isteğe göre ön camına yapıştır.</span>
+                </p>
+              </main>
+            </section>
+            <section class="card-card card-root-class-name1">
+              <div class="card-icon">
+                <img
+                  alt="image"
+                  src="public/Icons/group%201314-200h.png"
+                  class="card-icon1"
+                />
+              </div>
+              <main class="card-content">
+                <h1 class="card-header"><span>Ulaşılabilir ol</span></h1>
+                <p class="card-description">
+                  <span>
+                    Hatalı park gibi durumlarda insanlar etiketini kameradan
+                    okutarak size güvenle ulaşabilir, mesaj atabilir ve hatta
+                    sosyal medya hesaplarınızdan sizi takip edebilirler.
+                  </span>
+                </p>
+              </main>
+            </section>
+          </main>
+          <div class="home-container1">
+            <h2 class="home-heading2 section-heading">Etiketi al.</h2>
+            <h2 class="home-heading3 section-heading">Aracına yapıştır.</h2>
+            <img
+              src="public/SectionImages/isolated_left_hand_holding_smartphone%20kopya-400h.jpg"
+              alt="image"
+              class="home-image3"
+            />
+            <img
+              src="public/Icons/ads%C3%A4%C2%B1z-400h.png"
+              alt="image"
+              class="home-image4"
+            />
+            <h2 class="home-heading4 section-heading">
+              <span>Bilgilerini paylaş.</span>
+              <br />
+            </h2>
+            <img
+              src="public/SectionImages/ekran%20g%C3%A3%C2%B6r%C3%A3%C2%BCnt%C3%A3%C2%BCs%C3%A3%C2%BC%202023-07-30%20212941_iphone13starlight_portrait-300w.png"
+              alt="image"
+              class="home-image5"
+            />
+          </div>
+        </section>
+        <section class="home-section2">
+          <div class="home-note"><div class="home-image6"></div></div>
+        </section>
+        <section class="home-section3">
+          <div class="home-cube">
+            <div class="home-top side"></div>
+            <div class="home-front side"></div>
+            <div class="home-left1 side"></div>
+          </div>
+        </section>
+        <section class="home-section4">
+          <header class="home-header2">
+            <header class="home-left2">
+              <h2 class="home-heading5 section-heading">
+                Sizden Gelen Yorumlar
+              </h2>
+            </header>
+            <div class="home-right1"></div>
+          </header>
+          <main class="home-cards1">
+            <div class="home-container2">
+              <section class="review-card review-root-class-name">
+                <div class="review-stars">
+                  <svg viewBox="0 0 1024 1024" class="review-icon">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon02">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon04">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon06">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon08">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path>
+                  </svg>
+                </div>
+                <main class="review-content">
+                  <p class="review-quote">
+                    <span>
+                      "Aracıma yapıştırdım, artık hatalı park yapsam bile beni
+                      arıyorlar."
+                    </span>
+                  </p>
+                  <div class="review-author">
+                    <img
+                      alt="image"
+                      src="public/SectionImages/363499173_842216107553109_8253098251466224900_n-200h.jpg"
+                      class="review-avatar"
+                    />
+                    <div class="review-details">
+                      <h1 class="review-author1"><span>Sümeyye Emir</span></h1>
+                      <label class="review-position"><span>anonim</span></label>
+                    </div>
+                  </div>
+                </main>
+              </section>
+              <section class="review-card review-root-class-name">
+                <div class="review-stars">
+                  <svg viewBox="0 0 1024 1024" class="review-icon">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon02">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon04">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon06">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon08">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path>
+                  </svg>
+                </div>
+                <main class="review-content">
+                  <p class="review-quote">
+                    <span>
+                      "Kesinlikle her arabada olmalı bence gayet ucuz da"
+                    </span>
+                  </p>
+                  <div class="review-author">
+                    <img
+                      alt="image"
+                      src="public/SectionImages/355826368_167550709511182_9146290140771145252_n-200h.jpg"
+                      class="review-avatar"
+                    />
+                    <div class="review-details">
+                      <h1 class="review-author1"><span>Hakan Keleş</span></h1>
+                      <label class="review-position">
+                        <span>Manager</span>
+                      </label>
+                    </div>
+                  </div>
+                </main>
+              </section>
+            </div>
+            <div class="home-container3">
+              <section class="review-card review-root-class-name">
+                <div class="review-stars">
+                  <svg viewBox="0 0 1024 1024" class="review-icon">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon02">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon04">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon06">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon08">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path>
+                  </svg>
+                </div>
+                <main class="review-content">
+                  <p class="review-quote">
+                    <span>"Şahinde on numara duruyo :)"</span>
+                  </p>
+                  <div class="review-author">
+                    <img
+                      alt="image"
+                      src="public/SectionImages/indir-200h.jpeg"
+                      class="review-avatar"
+                    />
+                    <div class="review-details">
+                      <h1 class="review-author1"><span>Tofaş Reis</span></h1>
+                      <label class="review-position">
+                        <span>Manager</span>
+                      </label>
+                    </div>
+                  </div>
+                </main>
+              </section>
+            </div>
+            <div class="home-container4">
+              <section class="review-card review-root-class-name">
+                <div class="review-stars">
+                  <svg viewBox="0 0 1024 1024" class="review-icon">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon02">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon04">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon06">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon08">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path>
+                  </svg>
+                </div>
+                <main class="review-content">
+                  <p class="review-quote">
+                    <span>
+                      “Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore veritatis et
+                      quasi architecto beatae.”
+                    </span>
+                  </p>
+                  <div class="review-author">
+                    <img
+                      alt="image"
+                      src="https://images.unsplash.com/photo-1610276198568-eb6d0ff53e48?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fHBvdHJhaXR8ZW58MHx8fHwxNjY3NzU5NDE3&amp;ixlib=rb-4.0.3&amp;w=200"
+                      class="review-avatar"
+                    />
+                    <div class="review-details">
+                      <h1 class="review-author1">
+                        <span>Sima Mosbacher</span>
+                      </h1>
+                      <label class="review-position">
+                        <span>Manager</span>
+                      </label>
+                    </div>
+                  </div>
+                </main>
+              </section>
+              <section class="review-card review-root-class-name">
+                <div class="review-stars">
+                  <svg viewBox="0 0 1024 1024" class="review-icon">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon02">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon04">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon06">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="review-icon08">
+                    <path
+                      d="M512 736l-264 160 70-300-232-202 306-26 120-282 120 282 306 26-232 202 70 300z"
+                    ></path>
+                  </svg>
+                </div>
+                <main class="review-content">
+                  <p class="review-quote">
+                    <span>
+                      “Doloremque laudantium, totam rem aperiam, eaque ipsa quae
+                      ab illo inventore veritatis et quasi architecto beatae.”
+                    </span>
+                  </p>
+                  <div class="review-author">
+                    <img
+                      alt="image"
+                      src="https://images.unsplash.com/photo-1610276198568-eb6d0ff53e48?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fHBvdHJhaXR8ZW58MHx8fHwxNjY3NzU5NDE3&amp;ixlib=rb-4.0.3&amp;w=200"
+                      class="review-avatar"
+                    />
+                    <div class="review-details">
+                      <h1 class="review-author1">
+                        <span>Sima Mosbacher</span>
+                      </h1>
+                      <label class="review-position">
+                        <span>Manager</span>
+                      </label>
+                    </div>
+                  </div>
+                </main>
+              </section>
+            </div>
+          </main>
+          <section class="home-section5">
+            <div class="home-cube1">
+              <div class="home-top1 side"></div>
+              <div class="home-front1 side"></div>
+              <div class="home-left3 side"></div>
+            </div>
+            <main class="home-pricing">
+              <header class="home-header3">
+                <header class="home-left4"></header>
+                <div class="home-right2"></div>
+              </header>
+              <div class="home-plans-container">
+                <main class="home-plans">
+                  <div class="home-plan">
+                    <div class="home-details">
+                      <div class="home-header4">
+                        <label class="home-name">
+                          <span>Güncel Fiyat:</span>
+                          <br />
+                        </label>
+                        <div class="home-pricing1">
+                          <h1 class="home-price">69 TL</h1>
+                          <span class="home-duration">/ Ömür boyu</span>
+                        </div>
+                      </div>
+                      <p class="home-description">
+                        Bİr seferlik al etiket solana kadar kullan!
+                      </p>
+                    </div>
+                    <div class="home-container5">
+                      <div class="home-buy-details">
+                        <div class="home-features">
+                          <span class="home-heading6">You will get</span>
+                          <div class="home-list">
+                            <div
+                              class="includes1-mark includes1-root-class-name"
+                            >
+                              <div class="includes1-icon">
+                                <svg
+                                  viewBox="0 0 1024 1024"
+                                  class="includes1-icon1"
+                                >
+                                  <path
+                                    d="M384 690l452-452 60 60-512 512-238-238 60-60z"
+                                  ></path>
+                                </svg>
+                              </div>
+                              <label class="includes1-label">
+                                <span>Whatsapp'tan mesaj alabilme</span>
+                              </label>
+                            </div>
+                            <div
+                              class="includes1-mark includes1-root-class-name"
+                            >
+                              <div class="includes1-icon">
+                                <svg
+                                  viewBox="0 0 1024 1024"
+                                  class="includes1-icon1"
+                                >
+                                  <path
+                                    d="M384 690l452-452 60 60-512 512-238-238 60-60z"
+                                  ></path>
+                                </svg>
+                              </div>
+                              <label class="includes1-label">
+                                <span>Telefon numara ekleme özelliği</span>
+                              </label>
+                            </div>
+                            <div
+                              class="includes1-mark includes1-root-class-name"
+                            >
+                              <div class="includes1-icon">
+                                <svg
+                                  viewBox="0 0 1024 1024"
+                                  class="includes1-icon1"
+                                >
+                                  <path
+                                    d="M384 690l452-452 60 60-512 512-238-238 60-60z"
+                                  ></path>
+                                </svg>
+                              </div>
+                              <label class="includes1-label">
+                                <span>
+                                  İnstagram Profilini ekleyebilme özelliği
+                                </span>
+                              </label>
+                            </div>
+                            <div
+                              class="includes1-mark includes1-root-class-name23"
+                            >
+                              <div class="includes1-icon">
+                                <svg
+                                  viewBox="0 0 1024 1024"
+                                  class="includes1-icon1"
+                                >
+                                  <path
+                                    d="M384 690l452-452 60 60-512 512-238-238 60-60z"
+                                  ></path>
+                                </svg>
+                              </div>
+                              <label class="includes1-label">
+                                <span>İsteğe bağlı sınırsız link</span>
+                              </label>
+                            </div>
+                            <div
+                              class="includes1-mark includes1-root-class-name22"
+                            >
+                              <div class="includes1-icon">
+                                <svg
+                                  viewBox="0 0 1024 1024"
+                                  class="includes1-icon1"
+                                >
+                                  <path
+                                    d="M384 690l452-452 60 60-512 512-238-238 60-60z"
+                                  ></path>
+                                </svg>
+                              </div>
+                              <label class="includes1-label">
+                                <span>Kullanışlı arayüz</span>
+                              </label>
+                            </div>
+                            <div
+                              class="includes1-mark includes1-root-class-name"
+                            >
+                              <div class="includes1-icon">
+                                <svg
+                                  viewBox="0 0 1024 1024"
+                                  class="includes1-icon1"
+                                >
+                                  <path
+                                    d="M384 690l452-452 60 60-512 512-238-238 60-60z"
+                                  ></path>
+                                </svg>
+                              </div>
+                              <label class="includes1-label">
+                                <span>Güvenilirlik ön planda</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+                <main class="home-banner">
+                  <div class="home-header5">
+                    <h2 class="section-heading">Hemen Al!</h2>
+                    <p class="home-description1 section-description">
+                      <span>Al,yapıştır,ulaşılabilir ol!</span>
+                      <br />
+                    </p>
+                  </div>
+                  <div class="home-buttons1">
+                    <div class="home-get-started2 button">
+                      <span class="home-text11">
+                        <span class="home-text12">Satın Al</span>
+                        <br />
+                      </span>
+                    </div>
+                    <a
+                      href="https://wa.me/905436155147"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link"
+                    >
+                      <div class="home-book-demo button">
+                        <span class="home-text14">
+                          <span class="home-text15">Whatsapp Destek Hattı</span>
+                          <br />
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </main>
+              </div>
+            </main>
+          </section>
+        </section>
+        <footer class="home-footer">
+          <div class="home-content1">
+            <main class="home-main-content">
+              <div class="home-content2">
+                <header class="home-main1">
+                  <div class="home-header6">
+                    <img
+                      alt="image"
+                      src="public/Branding/planical7012-ttpb.svg"
+                      class="home-branding"
+                    />
+                    <span class="home-text17">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </span>
+                  </div>
+                  <div class="home-socials">
+                    <a
+                      href="https://example.com"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link1"
+                    >
+                      <img
+                        alt="image"
+                        src="public/Icons/linkedin-200h.png"
+                        class="social"
+                      />
+                    </a>
+                    <a
+                      href="https://example.com"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link2"
+                    >
+                      <img
+                        alt="image"
+                        src="public/Icons/instagram-200h.png"
+                        class="social"
+                      />
+                    </a>
+                    <a
+                      href="https://example.com"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link3"
+                    >
+                      <img
+                        alt="image"
+                        src="public/Icons/twitter-200h.png"
+                        class="social"
+                      />
+                    </a>
+                  </div>
+                </header>
+                <header class="home-categories">
+                  <div class="home-category">
+                    <div class="home-header7">
+                      <span class="footer-header">Solutions</span>
+                    </div>
+                    <div class="home-links">
+                      <span class="footer-link">Static Website Generator</span>
+                    </div>
+                  </div>
+                  <div class="home-category1">
+                    <div class="home-header8">
+                      <span class="footer-header">Company</span>
+                    </div>
+                    <div class="home-links1">
+                      <span class="footer-link">About</span>
+                      <span class="footer-link">Team</span>
+                      <span class="footer-link">News</span>
+                      <span class="footer-link">Partners</span>
+                      <span class="footer-link">Careers</span>
+                      <span class="footer-link">Press &amp; Media</span>
+                    </div>
+                  </div>
+                </header>
+              </div>
+              <section class="home-copyright">
+                <span class="home-text27">
+                  © 2022 latitude. All Rights Reserved.
+                </span>
+              </section>
+            </main>
+            <main class="home-subscribe">
+              <main class="home-main2">
+                <div class="home-input-field">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    class="home-textinput input"
+                  />
+                  <div class="home-buy button">
+                    <span class="home-text28">-&gt;</span>
+                    <span class="home-text29">
+                      <span>Bildirimleri al</span>
+                      <br />
+                    </span>
+                  </div>
+                </div>
+              </main>
+              <h1 class="home-notice">
+                Bültenimize abone olarak, Şartlar ve Koşullarımızı kabul etmiş
+                olursunuz.
+              </h1>
+            </main>
+            <section class="home-copyright1">
+              <span class="home-text32">
+                © 2023 Created by Kerem Akman. Tüm Hakları Saklıdır.
+              </span>
+            </section>
+          </div>
+        </footer>
+        <div>
+          <dangerous-html
+            html="<script>
+    /*
+Accordion - Code Embed
+*/
+
+/* listenForUrlChangesAccordion() makes sure that if you changes pages inside your app,
+the Accordions will still work*/
+
+const listenForUrlChangesAccordion = () => {
+      let url = location.href;
+      document.body.addEventListener(
+        'click',
+        () => {
+          requestAnimationFrame(() => {
+            if (url !== location.href) {
+              runAccordionCodeEmbed();
+              url = location.href;
+            }
+          });
+        },
+        true
+      );
+    };
+
+
+const runAccordionCodeEmbed = () => {
+    const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
+    const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
+    const accordionIcons = document.querySelectorAll('[data-role='accordion-icon']'); // All accordion icons
+
+    accordionContents.forEach((accordionContent) => {
+        accordionContent.style.display = 'none'; //Hides all accordion contents
+    });
+
+    accordionContainers.forEach((accordionContainer, index) => {
+        accordionContainer.addEventListener('click', () => {
+            accordionContents.forEach((accordionContent) => {
+            accordionContent.style.display = 'none'; //Hides all accordion contents
+            });
+
+            accordionIcons.forEach((accordionIcon) => {
+                accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
+            });
+
+            accordionContents[index].style.display = 'flex'; // Shows accordion content
+            accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
+        });
+    });
+}
+
+runAccordionCodeEmbed()
+listenForUrlChangesAccordion()
+
+/*
+Here's what the above is doing:
+    1. Selects all accordion containers, contents, and icons
+    2. Hides all accordion contents
+    3. Adds an event listener to each accordion container
+    4. When an accordion container is clicked, it:
+        - Hides all accordion contents
+        - Resets all icon transforms to 0deg (default)
+        - Checks if this container has class 'accordion-open'
+            - If it does, it removes class 'accordion-open'
+            - If it doesn't, it:
+                - Removes class 'accordion-open' from all containers
+                - Adds class 'accordion-open' to this container
+                - Shows accordion content
+                - Rotates accordion icon 180deg
+*/
+</script>"
+          ></dangerous-html>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
